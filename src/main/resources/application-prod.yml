@@ -1,0 +1,18 @@
+config:
+  base_path: F:\\teemo\\e-space-api
+  pic: ${config.base_path}\\pic
+
+logback:
+  logdir: ${config.base_path}\\log
+  appname: mshop
+  ##打印输出等级
+  level: info
+
+jdbc:
+  url: 192.168.1.11
+  name: root
+  password: root
+
+redis:
+  url: 192.168.1.11
+  password: jbladmin123
