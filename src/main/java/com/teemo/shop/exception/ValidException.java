@@ -6,6 +6,10 @@ import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 import org.springframework.validation.BindingResult;
 
+
+/**
+ *  参数验证异常
+ * */
 @EqualsAndHashCode(callSuper = true)
 @Data
 @Accessors(chain = true)

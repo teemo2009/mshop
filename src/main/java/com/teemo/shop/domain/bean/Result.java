@@ -27,7 +27,6 @@ public class Result<T> {
     public static Result fail(){
         return new Result(ResultEnum.FAIL);
     }
-
     public static Result unkonw(){
         return new Result(ResultEnum.UNKONW_ERROR);
     }

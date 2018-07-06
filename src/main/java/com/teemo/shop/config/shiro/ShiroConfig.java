@@ -6,11 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
-public class ShiroConfig extends BaseShiroConfig {
+public class ShiroConfig extends BaseShiroConfig  {
 
     @Override
     public BaseCustomRealm customRealm() {
-        return new CustomRealm();
+        CustomRealm customRealm=new CustomRealm();
+        return customRealm;
     }
 
     @Override

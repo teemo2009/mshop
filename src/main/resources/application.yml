@@ -41,6 +41,7 @@ spring:
 jwt:
   ###TOKEN有效期 1小时 3600000
   expire: 3600000
+  salt: mshop
 
 redis:
    prefix: 'SHOP:'

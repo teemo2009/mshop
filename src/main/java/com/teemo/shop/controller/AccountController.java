@@ -22,7 +22,7 @@ public class AccountController {
         if(result.hasErrors()){
            throw new ValidException(result);
         }
-        return Result.success().message("登录成功");
+        return accountService.login(account);
     }
 
     @PutMapping("/register")

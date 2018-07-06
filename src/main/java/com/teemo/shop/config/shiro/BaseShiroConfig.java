@@ -8,7 +8,10 @@ import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.apache.shiro.web.mgt.DefaultWebSessionStorageEvaluator;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
+import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
 
 import javax.servlet.Filter;
@@ -17,7 +20,7 @@ import java.util.*;
 /**
  *  一个工程只能实现其一个子类
  * */
-public abstract class BaseShiroConfig {
+public abstract class BaseShiroConfig  {
 
     /**子类需要覆盖该实现
      * @return
@@ -32,6 +35,7 @@ public abstract class BaseShiroConfig {
      * @return
      */
     public  abstract List<String> filterByAnon();
+
 
     @Bean
     public StatelessDefaultSubjectFactory subjectFactory() {

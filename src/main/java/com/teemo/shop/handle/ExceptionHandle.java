@@ -1,7 +1,7 @@
 package com.teemo.shop.handle;
 
 import com.teemo.shop.domain.bean.Result;
-import com.teemo.shop.exception.BaseException;
+import com.teemo.shop.exception.BusinessException;
 import com.teemo.shop.exception.ValidException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
@@ -38,10 +38,10 @@ public class ExceptionHandle extends ResponseEntityExceptionHandler  {
             return  Result.custom().code(validException.getCode())
                     .message(validException.getMessage())
                     .data(validException.getBindingResult().getFieldError().getDefaultMessage());
-        } else if(e instanceof BaseException){
-            BaseException baseException= (BaseException) e;
+        } else if(e instanceof BusinessException){
+            BusinessException businessException= (BusinessException) e;
             //业务逻辑异常
-            return  Result.fail().message(baseException.getMessage());
+            return Result.fail().data(businessException.getDetail());
         }
         log.error("class:{},detail:{}",e.getClass().getName(),e.getMessage());
         //未知错误

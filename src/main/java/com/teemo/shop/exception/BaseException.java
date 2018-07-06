@@ -8,12 +8,12 @@ import lombok.experimental.Accessors;
 
 
 /***
- *  业务逻辑异常
+ *  异常基类
  * */
 @EqualsAndHashCode(callSuper = true)
 @Data
 @Accessors(chain = true)
-public class BaseException extends RuntimeException {
+public abstract class BaseException extends RuntimeException {
     private Integer code;
     public BaseException(){}
     public BaseException(ResultEnum resultEnum){
