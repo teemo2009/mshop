@@ -18,6 +18,8 @@ import java.util.Set;
 public class Role extends BaseEntity {
     @Column(nullable = false)
     private String name;
+    @Column(nullable = false,unique = true)
+    private String alias;
     @ManyToMany
     @JoinTable(name = "role_permission",
             joinColumns =@JoinColumn(name = "role_id"),

@@ -24,9 +24,6 @@ public class CustomRealm extends  BaseCustomRealm {
     @Value("${redis.manager}")
     private String REDIS_MANAGER_KEY;
 
-    public CustomRealm(){
-        System.out.println("666");
-    }
 
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
