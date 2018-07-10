@@ -16,3 +16,4 @@ jdbc:
 redis:
   url: 192.168.1.11
   password: jbladmin123
+

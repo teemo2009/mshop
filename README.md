@@ -1,5 +1,6 @@
 # 概述
-开发一个高并发可用的商城，配合netty打造聊天和websocket，感兴趣的+q979651731一起搞
+开发一个高并发可用的商城，配合netty打造聊天和websocket，感兴趣的+q979651731一起搞  
+管理后台 https://github.com/teemo2009/mshop-admin
 # 框架技术
 spring boot 2.x  
 spring data jpa+querydsl(数据写和简单的读)    
