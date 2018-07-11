@@ -42,7 +42,6 @@ public class AccountController {
 
     @GetMapping("/all")
     public Result getAll(){
-        MyThreadLocal.put(877878);
        List<Account> lists= accountMapper.selectAll();
        return Result.success().data(lists);
     }

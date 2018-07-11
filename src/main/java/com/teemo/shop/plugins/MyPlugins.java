@@ -50,10 +50,10 @@ public class MyPlugins implements Interceptor {
             ReflectUtil.setFieldValue(boundSql, "sql", pageSql);
         }*/
         SecurityUtils.getSubject();
-        System.out.println(MyThreadLocal.get()+"========");
+       /* System.out.println(MyThreadLocal.get()+"========");*/
         String sql = boundSql.getSql();
-        String permSql =sql+" WHERE username=2";
-        ReflectUtil.setFieldValue(boundSql, "sql", permSql);
+      /*  String permSql =sql+" WHERE username=2";
+        ReflectUtil.setFieldValue(boundSql, "sql", permSql);*/
         return invocation.proceed();
 
     }
